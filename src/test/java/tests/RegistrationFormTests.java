@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class RegistrationFormTest {
+public class RegistrationFormTests {
 
     @BeforeAll
     static void beforeAll() {
@@ -29,7 +29,8 @@ public class RegistrationFormTest {
         $("#firstName").setValue("Alex");
         $("#lastName").setValue("Bond");
         $("#userEmail").setValue("alex@compani.com");
-        $(byText("Other")).click();
+        $("#genterWrapper").$(byText("Other")).click();
+       // $(byText("Other")).click();
         $("#userNumber").setValue("1234567890");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").selectOption("1984");
@@ -66,7 +67,7 @@ public class RegistrationFormTest {
         $(".table-responsive").$(byText("Hobbies"))
                 .parent().shouldHave(text("Music"));
         $(".table-responsive").$(byText("Picture"))
-                .parent().shouldHave(text("mem1*.jpg"));
+                .parent().shouldHave(text("mem1.jpg"));
         $(".table-responsive").$(byText("Address"))
                 .parent().shouldHave(text("Rome"));
         $(".table-responsive").$(byText("State and City"))
