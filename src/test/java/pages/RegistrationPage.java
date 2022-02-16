@@ -88,7 +88,7 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage imgPicture() {
+    public RegistrationPage uploadFile() {
         uploadPicture.uploadFromClasspath("mem1.jpg");
         return this;
     }
@@ -110,7 +110,7 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage Submit() {
+    public RegistrationPage clickSubmit() {
         submitButton.click();
         return this;
     }
@@ -128,7 +128,7 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage CloseButton() {
+    public RegistrationPage clickCloseButton() {
         closeButton.click();
         return this;
     }

@@ -48,11 +48,11 @@ public class RegistrationFormWithPageObjectsTests {
                 .setBirthDate(day, month, year)
                 .setSubjects(subjects)
                 .setHobbies(hobbies)
-                .imgPicture()
+                .uploadFile()
                 .setAddress(address)
                 .setState(state)
                 .setCity(city)
-                .Submit();
+                .clickSubmit();
 
 
         registrationPage
@@ -67,7 +67,7 @@ public class RegistrationFormWithPageObjectsTests {
                 .checkForm("Picture", "mem1.jpg")
                 .checkForm("Address", address)
                 .checkForm("State and City", "Uttar Pradesh Agra")
-                .CloseButton();
+                .clickCloseButton();
 
 
     }
